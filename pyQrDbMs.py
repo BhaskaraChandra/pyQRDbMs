@@ -6,12 +6,14 @@ from flask import Flask, jsonify, request
 #import uuid
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
+import ssl
+ssl.DEFAULT_CIPHERS = 'DEFAULT@SECLEVEL=1'
 
 app = Flask(__name__)
 
 conStr="mongodb+srv://chandrabhaskaras:mongo2024@cluster0.wakzrbn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 # Create a new client and connect to the server
-client = MongoClient(conStr, server_api=ServerApi('1'))
+client = MongoClient(conStr, server_api=ServerApi('1'), ssl=True)
 # Send a ping to confirm a successful connection
 try:
     client.admin.command('ping')
