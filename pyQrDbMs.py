@@ -13,13 +13,13 @@ conStr="mongodb+srv://chandrabhaskaras:mongo2024@cluster0.wakzrbn.mongodb.net/?r
 client = MongoClient(conStr, server_api=ServerApi('1'))
 # Send a ping to confirm a successful connection
 try:
-    client.admin.command('ping')
+    #client.admin.command('ping')
     print("Pinged your deployment. You successfully connected to MongoDB!")
 except Exception as e:
     print("ExceptionOccurred While Connecting to Mongo DB")
     print(e)
-mydb = client["Chandra"]
-mycol = mydb["QRRepo"] #collection
+#mydb = client["Chandra"]
+#mycol = mydb["QRRepo"] #collection
 
 #getVacantQRCount
 #getFreshQR
