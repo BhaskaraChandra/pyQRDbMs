@@ -22,8 +22,8 @@ try:
 except Exception as e:
     print("ExceptionOccurred While Connecting to Mongo DB")
     print(e)
-#mydb = client["Chandra"]
-#mycol = mydb["QRRepo"] #collection
+mydb = client["Chandra"]
+mycol = mydb["QRRepo"] #collection
 
 #getVacantQRCount
 #getFreshQR
