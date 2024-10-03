@@ -1,4 +1,5 @@
 from datetime import datetime
+import os
 from uuid import uuid4
 from flask import Flask, jsonify, request
 
@@ -102,4 +103,5 @@ def delete_task(task_id):
 print (__name__)
 if __name__ == '__main__':
     print ("Python running on docker")
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 8080))
+    app.run(host='0.0.0.0', port=port, debug=False)
