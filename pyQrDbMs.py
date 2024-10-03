@@ -16,6 +16,7 @@ try:
     client.admin.command('ping')
     print("Pinged your deployment. You successfully connected to MongoDB!")
 except Exception as e:
+    print("ExceptionOccurred While Connecting to Mongo DB")
     print(e)
 mydb = client["Chandra"]
 mycol = mydb["QRRepo"] #collection
